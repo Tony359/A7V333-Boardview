@@ -1,14 +1,19 @@
-# ASUS A7V333 (PCB R1.01A): boot path schematics
+# ASUS A7V333 (PCB R1.01A): board view and boot path schematics
 
-These are hand-traced schematics of the boot path of the ASUS A7V333 Socket A motherboard, PCB revision 1.01A. They cover everything the board needs to get from power-on to its first POST code.
+An interactive board view of the ASUS A7V333 Socket A motherboard, PCB revision 1.01A, plus hand-traced schematics of its boot path.
 
-**[Open the schematics](https://tony359.github.io/A7V333-Boardview/)**, or download `index.html` and open it in any browser.
+- **[Open the board view](https://tony359.github.io/A7V333-Boardview/):** every part with its value, and every pin with its net. Click a part to see what it is, or click a pin to highlight everything on the same net. It shows the top and bottom of the board, and you can search for a part, net or value.
+- **[Open the boot path schematics](https://tony359.github.io/A7V333-Boardview/schematics.html):** four sheets covering everything the board needs to get from power-on to its first POST code.
 
-This is an **unofficial reconstruction** traced from the board view. It is not an ASUS document, and I'm not affiliated with ASUS. It may contain errors, so check against your own board before relying on it.
+You can also download `index.html` or `schematics.html` and open them in any browser. Each one is a single file that works offline.
 
-## What's in it
+This is an **unofficial** reconstruction from the board's factory data. It is not an ASUS document, and I'm not affiliated with ASUS. It may contain errors, so check against your own board before relying on it.
 
-There are four sheets, with a search box to find parts, test pads and nets:
+## The board view
+
+The data is from build 60-M7A50G-A0, the version without RAID and FireWire. Parts that aren't fitted on that build show as empty footprints, so your board may have parts there if it's a different build. The parts list covers surface-mount parts only, so through-hole parts such as electrolytic capacitors, connectors and crystals have no value listed.
+
+## The schematics
 
 1. **Power-good and reset:** from the PSU power-good to the southbridge, the CPU PWROK and the PCI and CPU resets
 2. **Clocks:** the ICS94228 clock generator, the CPU clock and the BIOS clock
@@ -29,4 +34,4 @@ If your A7V333 is dead with no POST code, check that USB_EN is on 1-2 or 2-3.
 
 ## Licence
 
-The schematics are licensed under [CC BY-SA 4.0](LICENSE). You can share and adapt them, as long as you give credit and share your changes under the same licence.
+My own work here, the viewer pages and the traced schematics, is licensed under [CC BY-SA 4.0](LICENSE). You can share and adapt it, as long as you give credit and share your changes under the same licence. The underlying board data comes from ASUS.
